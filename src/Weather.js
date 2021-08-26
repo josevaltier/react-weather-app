@@ -1,4 +1,5 @@
 import React from "react";
+import "./Weather.css";
 
 export default function Weather() {
   return (
@@ -13,8 +14,9 @@ export default function Weather() {
       <h3>Wednesday, August 25th</h3>
 
       <div className="row">
-        <div className="col-3">34ºC</div>
-        <div className="col-3">☀</div>
+        <div className="col-6">
+          <img src="./sunny.png" /> <span>30ºC</span>
+        </div>
       </div>
       <div>Min 23ºC | Max 30ºC</div>
       <div className="row">
