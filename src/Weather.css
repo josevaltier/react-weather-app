@@ -27,6 +27,8 @@
 
 .Weather img {
   max-width: 100%;
+  position: relative;
+  top: -13px;
 }
 .Weather .searchBox {
   border-color: #415b90;
@@ -43,6 +45,10 @@
   margin: auto 4px;
 }
 
+.Weather .description {
+  color: #415b90;
+  font-size: 20px;
+}
 .Weather .currentWeather {
   line-height: 100px;
 }
