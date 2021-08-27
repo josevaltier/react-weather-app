@@ -106,3 +106,8 @@
 .Weather .wind:hover {
   background-color: #a5e9db;
 }
+
+.coder {
+  font-size: 13px;
+  text-align: center;
+}
