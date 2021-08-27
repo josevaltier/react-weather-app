@@ -3,9 +3,9 @@ import "./Weather.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate.js";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  let [city, setCity] = useState("");
+  let [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -15,10 +15,19 @@ export default function Weather() {
       city: response.data.name,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
+      minTemp: response.data.main.temp_min,
+      maxTemp: response.data.main.temp_max,
     });
   }
+  function search() {
+    const apiKey = "ff39a1560b2a6b58581393d9865ab25f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
+    search();
   }
   function updateCity(event) {
     setCity(event.target.value);
@@ -60,7 +69,10 @@ export default function Weather() {
               </span>
             </div>
           </div>
-          <div className="minMaxTemp">Min 23ºC | Max 30ºC</div>
+          <div className="minMaxTemp">
+            Min {Math.round(weatherData.minTemp)}ºC | Max{" "}
+            {Math.round(weatherData.maxTemp)}ºC
+          </div>
           <div className="row mt-3">
             <div className="col-5 humidity">
               Humidity: {weatherData.humidity}%
@@ -90,10 +102,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "ff39a1560b2a6b58581393d9865ab25f";
-    let city = "London";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
     return "Loading...";
   }
 }
