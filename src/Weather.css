@@ -25,10 +25,9 @@
   color: #415b90;
 }
 
-.Weather img {
-  max-width: 100%;
+.Weather canvas {
   position: relative;
-  top: -13px;
+  top: 11px;
 }
 .Weather .searchBox {
   border-color: #415b90;
