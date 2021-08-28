@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate.js";
+import WeatherIcon from "./WeatherIcon.js";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,6 +18,7 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       minTemp: response.data.main.temp_min,
       maxTemp: response.data.main.temp_max,
+      icon: response.data.weather[0].icon,
     });
   }
   function search() {
@@ -57,10 +59,7 @@ export default function Weather(props) {
 
           <div className="row">
             <div className="col-12 currentWeather">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt={weatherData.description}
-              />
+              <WeatherIcon code={response.data.icon} />
               <span>
                 <span className="mainTemp">
                   {Math.round(weatherData.temperature)}
