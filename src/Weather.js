@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate.js";
-import WeatherIcon from "./WeatherIcon.js";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -50,34 +49,7 @@ export default function Weather(props) {
             <input type="submit" value="Go!" className="searchButton" />
             <input type="submit" value="📍" className="locateMeButton" />
           </form>
-
-          <h1>{city}</h1>
-          <FormattedDate date={weatherData.date} />
-          <strong className="text-capitalize description">
-            {weatherData.description}
-          </strong>
-
-          <div className="row">
-            <div className="col-12 currentWeather">
-              <WeatherIcon code={response.data.icon} />
-              <span>
-                <span className="mainTemp">
-                  {Math.round(weatherData.temperature)}
-                </span>
-                <span className="unit">ºC</span>
-              </span>
-            </div>
-          </div>
-          <div className="minMaxTemp">
-            Min {Math.round(weatherData.minTemp)}ºC | Max{" "}
-            {Math.round(weatherData.maxTemp)}ºC
-          </div>
-          <div className="row mt-3">
-            <div className="col-5 humidity">
-              Humidity: {weatherData.humidity}%
-            </div>
-            <div className="col-5 wind">Wind: {weatherData.wind} km/h</div>
-          </div>
+          <WeatherInfo data={weatherData} />
         </div>
         <small className="coder">
           This project was coded by{" "}
