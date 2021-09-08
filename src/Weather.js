@@ -19,6 +19,7 @@ export default function Weather(props) {
       minTemp: response.data.main.temp_min,
       maxTemp: response.data.main.temp_max,
       icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
     });
   }
   function search() {
@@ -51,7 +52,7 @@ export default function Weather(props) {
             <input type="submit" value="📍" className="locateMeButton" />
           </form>
           <WeatherInfo data={weatherData} />
-          <WeatherForecast />
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
         <small className="coder">
           This project was coded by{" "}
