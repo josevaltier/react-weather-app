@@ -3,26 +3,26 @@
   border: solid;
   border-width: 2px;
   border-radius: 8px;
-  border-color: #415b90;
+  border-color: #234c63;
   padding: 20px;
   max-width: 600px;
   margin-top: 20px;
   text-align: center;
-  background-color: azure;
+  background-color: #eeeeee;
 }
 
 .Weather h1 {
   font-weight: bold;
   font-size: 45px;
-  color: #f8ed86;
-  -webkit-text-stroke-color: #415b90;
+  color: #ffc85b;
+  -webkit-text-stroke-color: #234c63;
   -webkit-text-stroke-width: 2px;
   margin-top: 10px;
 }
 
 .Weather h3 {
   font-size: 18px;
-  color: #415b90;
+  color: #234c63;
 }
 
 .Weather canvas {
@@ -30,22 +30,22 @@
   top: 11px;
 }
 .Weather .searchBox {
-  border-color: #415b90;
+  border-color: #234c63;
   border-radius: 4px;
   border-style: solid;
 }
 
 .Weather .searchButton,
 .locateMeButton {
-  background-color: #415b90;
-  color: #f8ed86;
-  border-color: #f8ed86;
+  background-color: #234c63;
+  color: #ffc85b;
+  border-color: #ffc85b;
   border-radius: 4px;
   margin: auto 4px;
 }
 
 .Weather .description {
-  color: #415b90;
+  color: #234c63;
   font-size: 20px;
 }
 .Weather .currentWeather {
@@ -56,8 +56,8 @@
   font-size: 45px;
   font-weight: bold;
   margin-left: 10px;
-  color: #a5e9db;
-  -webkit-text-stroke-color: #415b90;
+  color: #ffc85b;
+  -webkit-text-stroke-color: #234c63;
   -webkit-text-stroke-width: 2px;
 }
 
@@ -65,7 +65,7 @@
   position: relative;
   top: -20px;
   left: 2px;
-  color: #415b90;
+  color: #234c63;
 }
 
 .Weather .minMaxTemp,
@@ -73,37 +73,26 @@
 .wind {
   font-size: 19px;
   padding: 10px;
-  color: #415b90;
+  color: #234c63;
   border-radius: 10px;
   border: solid;
   border-width: 1px;
-  border-color: #415b90;
+  border-color: #234c63;
 }
 
 .Weather .minMaxTemp {
-  background-color: #a5e9db;
+  background-color: #ffc85b;
   margin: 0 120px;
 }
 
 .Weather .humidity {
-  background-color: #f8ed86;
+  background-color: #ffc85b;
   margin-left: 50px;
 }
 
 .Weather .wind {
-  background-color: #f8ed86;
+  background-color: #ffc85b;
   margin-left: 2px;
-}
-
-.Weather .minMaxTemp:hover {
-  background-color: #f8ed86;
-}
-
-.Weather .humidity:hover {
-  background-color: #a5e9db;
-}
-.Weather .wind:hover {
-  background-color: #a5e9db;
 }
 
 .coder {
