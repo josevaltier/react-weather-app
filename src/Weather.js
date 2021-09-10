@@ -53,12 +53,13 @@ export default function Weather(props) {
           <WeatherInfo data={weatherData} />
           <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
-        <small className="coder">
+        <div className="coder">
           This project was coded by{" "}
           <a
             href="https://www.linkedin.com/in/josefina-valtier-031bb2110/"
             target="_blank"
             rel="noreferrer"
+            className="coderlink"
           >
             Josefina Valtier
           </a>{" "}
@@ -67,11 +68,12 @@ export default function Weather(props) {
             href="https://github.com/josevaltier/react-weather-app"
             target="_blank"
             rel="noreferrer"
+            className="coderlink"
           >
             open-sourced on Github
           </a>
           .
-        </small>
+        </div>
       </div>
     );
   } else {

@@ -96,5 +96,19 @@
 
 .coder {
   font-size: 12px;
-  text-align: center;
+  position: relative;
+  left: 95px;
+  margin-top: 10px;
+}
+
+.coderlink {
+  color: #234c63;
+}
+
+a:hover {
+  color: #ffc85b;
+}
+
+a:visited {
+  color: #ffc85b;
 }
