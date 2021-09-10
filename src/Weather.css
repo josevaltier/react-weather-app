@@ -35,8 +35,7 @@
   border-style: solid;
 }
 
-.Weather .searchButton,
-.locateMeButton {
+.Weather .searchButton {
   background-color: #234c63;
   color: #ffc85b;
   border-color: #ffc85b;
@@ -53,7 +52,7 @@
 }
 
 .Weather .mainTemp {
-  font-size: 45px;
+  font-size: 47px;
   font-weight: bold;
   margin-left: 10px;
   color: #ffc85b;
@@ -61,7 +60,7 @@
   -webkit-text-stroke-width: 2px;
 }
 
-.Weather .unit {
+.currentWeather .unit {
   position: relative;
   top: -20px;
   left: 2px;

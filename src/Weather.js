@@ -49,7 +49,6 @@ export default function Weather(props) {
               onChange={updateCity}
             />
             <input type="submit" value="Go!" className="searchButton" />
-            <input type="submit" value="📍" className="locateMeButton" />
           </form>
           <WeatherInfo data={weatherData} />
           <WeatherForecast coordinates={weatherData.coordinates} />
